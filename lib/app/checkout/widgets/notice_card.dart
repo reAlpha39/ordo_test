@@ -26,14 +26,16 @@ class NoticeCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Text(
-        'Tolong pastikan semua pesanan anda sudah benar dan tidak kurang.',
-        style: TextStyle(
-          fontSize: 20.sp,
-          color: ColorStyle.tukode_,
-          fontWeight: FontWeight.w500,
+      child: Center(
+        child: Text(
+          'Tolong pastikan semua pesanan anda sudah benar dan tidak kurang.',
+          style: TextStyle(
+            fontSize: 20.sp,
+            color: ColorStyle.tukode_,
+            fontWeight: FontWeight.w500,
+          ),
+          textAlign: TextAlign.center,
         ),
-        textAlign: TextAlign.center,
       ),
     );
   }

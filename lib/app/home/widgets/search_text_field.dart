@@ -18,14 +18,22 @@ class SearchTextField extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.only(top: 4),
           child: TextField(
-            style: TextStyle(fontSize: 18.sp),
+            style: TextStyle(
+              fontSize: 16.sp,
+              color: const Color(0xFF8A7F7F),
+            ),
             decoration: InputDecoration(
               hintText: 'Cari dengan mengetik barang',
+              hintStyle: TextStyle(
+                fontSize: 16.sp,
+                color: const Color(0xFFCDCDCD),
+                fontWeight: FontWeight.w500,
+              ),
               border: InputBorder.none,
               prefixIcon: Icon(
                 Icons.search,
                 color: Colors.green,
-                size: 28.sp,
+                size: 26.sp,
               ),
             ),
           ),

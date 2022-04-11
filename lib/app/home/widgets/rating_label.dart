@@ -12,7 +12,7 @@ class RatingLabel extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 8,
-          vertical: 2,
+          vertical: 4,
         ),
         decoration: const BoxDecoration(
           color: ColorStyle.ratingColor,
@@ -28,13 +28,14 @@ class RatingLabel extends StatelessWidget {
             Icon(
               Icons.star,
               color: Colors.white,
-              size: 18.sp,
+              size: 16.sp,
             ),
+            const SizedBox(width: 4),
             Text(
               '5.0 | 200+ rating',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 11.sp,
+                fontSize: 12.sp,
               ),
             ),
           ],

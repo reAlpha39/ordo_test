@@ -64,7 +64,7 @@ class ProductCard extends StatelessWidget {
                   child: Text(
                     'Diskon 10%',
                     style: TextStyle(
-                      fontSize: 16.sp,
+                      fontSize: 14.sp,
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
                     ),

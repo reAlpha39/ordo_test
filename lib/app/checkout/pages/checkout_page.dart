@@ -22,9 +22,10 @@ class CheckoutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Checkout',
           style: TextStyle(
+            fontSize: 24.sp,
             color: ColorStyle.cargooo,
             fontWeight: FontWeight.w700,
           ),
@@ -108,17 +109,19 @@ class _CheckoutBody extends StatelessWidget {
                     onPressed: () {},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Text(
                           'Waktu Pengantaran',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
+                            fontSize: 16.sp,
                           ),
                         ),
                         Icon(
                           Icons.arrow_forward_ios_rounded,
                           color: Colors.white,
+                          size: 20.sp,
                         ),
                       ],
                     ),
@@ -128,17 +131,19 @@ class _CheckoutBody extends StatelessWidget {
                     onPressed: () {},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Text(
                           'Alamat Pengiriman',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
+                            fontSize: 16.sp,
                           ),
                         ),
                         Icon(
                           Icons.arrow_forward_ios_rounded,
                           color: Colors.white,
+                          size: 20.sp,
                         ),
                       ],
                     ),

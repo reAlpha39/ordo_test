@@ -26,7 +26,7 @@ class OrderNote extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Catatan Item',
+            'Catatan Pembayaran',
             style: TextStyle(
               fontSize: 18.sp,
               color: const Color(0x7E000000),
@@ -37,6 +37,10 @@ class OrderNote extends StatelessWidget {
           TextField(
             maxLines: 3,
             controller: cubit.catatanPesanan,
+            style: TextStyle(
+              fontSize: 16.sp,
+              color: const Color(0xFF8A7F7F),
+            ),
             decoration: InputDecoration(
               border: OutlineInputBorder(
                 borderSide: const BorderSide(

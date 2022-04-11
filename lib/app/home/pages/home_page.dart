@@ -60,12 +60,11 @@ class _HomeBody extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               const CarouselCard(
                 asset: 'assets/images/adaaqua.png',
               ),
+              const SizedBox(height: 10),
               GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(
@@ -75,7 +74,7 @@ class _HomeBody extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 6.w / 9.h,
+                  childAspectRatio: 6.w / 8.5.h,
                   mainAxisSpacing: 8,
                   crossAxisSpacing: 8,
                 ),

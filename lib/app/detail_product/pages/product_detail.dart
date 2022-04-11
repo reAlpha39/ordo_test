@@ -7,7 +7,6 @@ import 'package:ordo_test/injection.dart';
 import 'package:ordo_test/presentation/blocs/carousel_card/carousel_card_cubit.dart';
 import 'package:ordo_test/presentation/constant/constant.dart';
 import 'package:ordo_test/presentation/widgets/custom_back_button.dart';
-import 'package:ordo_test/presentation/widgets/pill_card.dart';
 
 import '../../../presentation/widgets/carousel_card.dart';
 import '../../home_root/widgets/custom_bottom_navbar.dart';
@@ -22,9 +21,10 @@ class ProductDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'PRODUK DETAIL',
           style: TextStyle(
+            fontSize: 24.sp,
             color: ColorStyle.cargooo,
             fontWeight: FontWeight.w700,
           ),
