@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../blocs/cubit/custom_bottom_navbar_cubit.dart';
+import '../blocs/custom_bottom_navbar/custom_bottom_navbar_cubit.dart';
 
 class CustomBottomNavbar extends StatelessWidget {
   const CustomBottomNavbar({Key? key}) : super(key: key);
