@@ -11,6 +11,10 @@ ThemeData theme() {
     progressIndicatorTheme: const ProgressIndicatorThemeData(
       color: ColorStyle.cargooo,
     ),
+    appBarTheme: const AppBarTheme(
+      elevation: 0,
+      backgroundColor: Colors.transparent,
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         primary: ColorStyle.cartago_,

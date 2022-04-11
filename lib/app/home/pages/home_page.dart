@@ -14,8 +14,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => getIt<CarouselCardCubit>(),
-      child: const Scaffold(
-        body: _HomeBody(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: const TopNavigationBar(),
+        ),
+        body: const _HomeBody(),
       ),
     );
   }
@@ -37,7 +40,6 @@ class _HomeBody extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              const TopNavigationBar(),
               const CarouselCard(),
               GridView.builder(
                 shrinkWrap: true,
