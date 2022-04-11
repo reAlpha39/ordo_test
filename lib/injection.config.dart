@@ -7,6 +7,7 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
+import 'app/checkout/blocs/note/note_cubit.dart' as _i5;
 import 'app/home_root/blocs/custom_bottom_navbar/custom_bottom_navbar_cubit.dart'
     as _i4;
 import 'presentation/blocs/carousel_card/carousel_card_cubit.dart'
@@ -19,5 +20,6 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   final gh = _i2.GetItHelper(get, environment, environmentFilter);
   gh.factory<_i3.CarouselCardCubit>(() => _i3.CarouselCardCubit());
   gh.factory<_i4.CustomBottomNavbarCubit>(() => _i4.CustomBottomNavbarCubit());
+  gh.factory<_i5.NoteCubit>(() => _i5.NoteCubit());
   return get;
 }

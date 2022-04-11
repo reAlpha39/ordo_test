@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ordo_test/app/checkout/blocs/note/note_cubit.dart';
 import 'package:ordo_test/presentation/constant/constant.dart';
 import 'package:ordo_test/presentation/widgets/pill_card.dart';
 
@@ -9,17 +11,21 @@ class ItemCard extends StatelessWidget {
     required this.title,
     required this.price,
     required this.imageAsset,
+    required this.index,
   }) : super(key: key);
 
   final String title;
   final String price;
   final String imageAsset;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
+    final cubit = context.read<NoteCubit>();
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
+        width: MediaQuery.of(context).size.width - 30.w,
         padding: const EdgeInsets.symmetric(
           horizontal: 16,
           vertical: 16,
@@ -100,7 +106,7 @@ class ItemCard extends StatelessWidget {
                   child: Row(
                     children: [
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => cubit.removeItem(index),
                         child: Text(
                           '-',
                           style: TextStyle(
@@ -110,16 +116,20 @@ class ItemCard extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 12),
-                      Text(
-                        '2',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18.sp,
-                        ),
+                      BlocBuilder<NoteCubit, NoteState>(
+                        builder: (context, state) {
+                          return Text(
+                            cubit.totalItemList[index].toString(),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18.sp,
+                            ),
+                          );
+                        },
                       ),
                       const SizedBox(width: 12),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => cubit.addItem(index),
                         child: Text(
                           '+',
                           style: TextStyle(
@@ -132,28 +142,41 @@ class ItemCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 8),
-                GestureDetector(
-                  onTap: () {},
-                  child: PillCard(
-                    backgroundColor: ColorStyle.cargooo,
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.edit,
-                          color: Colors.white,
-                          size: 14.sp,
+                BlocBuilder<NoteCubit, NoteState>(
+                  builder: (context, state) {
+                    return GestureDetector(
+                      onTap: () => cubit.noteControllerList[index].text != ''
+                          ? cubit.clearController(index)
+                          : cubit.toggleNote(index),
+                      child: PillCard(
+                        backgroundColor:
+                            cubit.noteControllerList[index].text != ''
+                                ? ColorStyle.cartago_
+                                : ColorStyle.cargooo,
+                        child: Row(
+                          children: [
+                            Icon(
+                              cubit.noteControllerList[index].text != ''
+                                  ? Icons.delete_forever_rounded
+                                  : Icons.edit,
+                              color: Colors.white,
+                              size: 14.sp,
+                            ),
+                            const SizedBox(width: 8),
+                            Text(
+                              cubit.noteControllerList[index].text != ''
+                                  ? 'Hapus Catatan'
+                                  : 'Catatan',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18.sp,
+                              ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(width: 8),
-                        Text(
-                          'Catatan',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18.sp,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                      ),
+                    );
+                  },
                 ),
               ],
             )
