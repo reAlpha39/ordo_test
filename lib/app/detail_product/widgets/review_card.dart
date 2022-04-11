@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ordo_test/presentation/constant/constant.dart';
 
 class ReviewCard extends StatelessWidget {
@@ -55,18 +56,22 @@ class ReviewCard extends StatelessWidget {
                     children: [
                       Text(
                         name,
-                        style: TextStyle(
-                          fontSize: 20.sp,
-                          color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                        style: GoogleFonts.inter(
+                          textStyle: TextStyle(
+                            fontSize: 20.sp,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
                       Text(
                         '14 min',
-                        style: TextStyle(
-                          fontSize: 14.sp,
-                          color: const Color(0xFFB4BBC6),
-                          fontWeight: FontWeight.w500,
+                        style: GoogleFonts.inter(
+                          textStyle: TextStyle(
+                            fontSize: 14.sp,
+                            color: const Color(0xFFB4BBC6),
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
                     ],
@@ -96,10 +101,12 @@ class ReviewCard extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             "That's a fantastic new app feature. You and your team did an excellent job of incorporating user testing feedback.",
-            style: TextStyle(
-              fontSize: 16.sp,
-              color: Colors.black,
-              fontWeight: FontWeight.w400,
+            style: GoogleFonts.inter(
+              textStyle: TextStyle(
+                fontSize: 16.sp,
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ),
         ],

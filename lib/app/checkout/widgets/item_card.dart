@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ordo_test/app/checkout/blocs/note/note_cubit.dart';
 import 'package:ordo_test/presentation/constant/constant.dart';
 import 'package:ordo_test/presentation/widgets/pill_card.dart';
@@ -80,10 +81,12 @@ class ItemCard extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: TextStyle(
-                        fontSize: 24.sp,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w600,
+                      style: GoogleFonts.inter(
+                        textStyle: TextStyle(
+                          fontSize: 24.sp,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                     Text(
@@ -109,9 +112,12 @@ class ItemCard extends StatelessWidget {
                         onTap: () => cubit.removeItem(index),
                         child: Text(
                           '-',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18.sp,
+                          style: GoogleFonts.inter(
+                            textStyle: TextStyle(
+                              fontSize: 18.sp,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ),
@@ -120,9 +126,12 @@ class ItemCard extends StatelessWidget {
                         builder: (context, state) {
                           return Text(
                             cubit.totalItemList[index].toString(),
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18.sp,
+                            style: GoogleFonts.inter(
+                              textStyle: TextStyle(
+                                fontSize: 18.sp,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                           );
                         },
@@ -132,9 +141,12 @@ class ItemCard extends StatelessWidget {
                         onTap: () => cubit.addItem(index),
                         child: Text(
                           '+',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18.sp,
+                          style: GoogleFonts.inter(
+                            textStyle: TextStyle(
+                              fontSize: 18.sp,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ),
@@ -167,9 +179,12 @@ class ItemCard extends StatelessWidget {
                               cubit.noteControllerList[index].text != ''
                                   ? 'Hapus Catatan'
                                   : 'Catatan',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18.sp,
+                              style: GoogleFonts.inter(
+                                textStyle: TextStyle(
+                                  fontSize: 18.sp,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ],

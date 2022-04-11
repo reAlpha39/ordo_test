@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ordo_test/app/home/widgets/rating_label.dart';
 import 'package:ordo_test/presentation/constant/constant.dart';
 import 'package:ordo_test/presentation/widgets/pill_card.dart';
@@ -50,11 +51,12 @@ class ProductCard extends StatelessWidget {
               children: [
                 Text(
                   'Rp. 6000',
-                  style: TextStyle(
-                    fontFamily: 'Inter',
-                    decoration: TextDecoration.lineThrough,
-                    fontSize: 22.sp,
-                    color: ColorStyle.cargooo,
+                  style: GoogleFonts.inter(
+                    textStyle: TextStyle(
+                      decoration: TextDecoration.lineThrough,
+                      fontSize: 22.sp,
+                      color: ColorStyle.cargooo,
+                    ),
                   ),
                 ),
                 PillCard(
@@ -70,15 +72,14 @@ class ProductCard extends StatelessWidget {
                 ),
               ],
             ),
-            Text(
-              'Rp. 4500',
-              style: TextStyle(
-                fontFamily: 'Inter',
-                fontSize: 22.sp,
-                fontWeight: FontWeight.w800,
-                color: ColorStyle.cargooo,
-              ),
-            ),
+            Text('Rp. 4500',
+                style: GoogleFonts.inter(
+                  textStyle: TextStyle(
+                    fontSize: 22.sp,
+                    fontWeight: FontWeight.w800,
+                    color: ColorStyle.cargooo,
+                  ),
+                )),
             const SizedBox(height: 16),
             Text(
               'Lorem ipsum',
