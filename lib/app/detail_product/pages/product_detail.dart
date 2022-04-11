@@ -92,7 +92,7 @@ class _ProductDetailBody extends StatelessWidget {
                           topLeft: Radius.elliptical(70, 70),
                         ),
                       ),
-                      height: 100.h,
+                      height: 300.h,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 20),
