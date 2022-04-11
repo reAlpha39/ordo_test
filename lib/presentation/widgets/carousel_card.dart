@@ -51,7 +51,7 @@ class CarouselCard extends StatelessWidget {
                       carouselCubit.carouselController.animateToPage(entry.key),
                   child: Container(
                     width: carouselCubit.carouselCardIndex == entry.key
-                        ? 35.w
+                        ? 30.w
                         : 43.w,
                     height: 11.0.h,
                     margin: const EdgeInsets.symmetric(

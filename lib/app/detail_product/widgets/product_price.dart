@@ -35,7 +35,7 @@ class ProductPrice extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(width: 16),
+                const SizedBox(width: 8),
                 PillCard(
                   backgroundColor: ColorStyle.cargooo,
                   child: Text(

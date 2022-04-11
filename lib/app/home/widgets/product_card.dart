@@ -6,7 +6,12 @@ import 'package:ordo_test/presentation/constant/constant.dart';
 import 'package:ordo_test/presentation/widgets/pill_card.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard({Key? key}) : super(key: key);
+  const ProductCard(
+      {Key? key, required this.assetImage, required this.backgroundColor})
+      : super(key: key);
+
+  final String assetImage;
+  final Color backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,7 @@ class ProductCard extends StatelessWidget {
       onTap: () => context.pushNamed('product_detail'),
       child: Container(
         padding: const EdgeInsets.all(8.0),
-        height: 200,
+        height: 200.h,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(19),
@@ -26,11 +31,14 @@ class ProductCard extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.green.shade100,
+                    color: backgroundColor,
                     borderRadius: BorderRadius.circular(19),
                   ),
                   child: Image.asset(
-                    'assets/images/image1.png',
+                    assetImage,
+                    fit: BoxFit.contain,
+                    height: 140.h,
+                    width: double.infinity,
                   ),
                 ),
                 const RatingLabel(),

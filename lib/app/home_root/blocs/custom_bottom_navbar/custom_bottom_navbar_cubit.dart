@@ -14,9 +14,11 @@ class CustomBottomNavbarCubit extends Cubit<CustomBottomNavbarState> {
   PageController pageController = PageController(initialPage: 2);
 
   void changePage(int index) {
-    emit(const CustomBottomNavbarState.loading());
-    selectedPage = index;
-    pageController.jumpToPage(selectedPage);
-    emit(const CustomBottomNavbarState.changed());
+    try {
+      emit(const CustomBottomNavbarState.loading());
+      selectedPage = index;
+      pageController.jumpToPage(selectedPage);
+      emit(const CustomBottomNavbarState.changed());
+    } catch (_) {}
   }
 }

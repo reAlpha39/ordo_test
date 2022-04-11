@@ -18,14 +18,36 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: const TopNavigationBar(),
         ),
-        body: const _HomeBody(),
+        body: _HomeBody(),
       ),
     );
   }
 }
 
 class _HomeBody extends StatelessWidget {
-  const _HomeBody({Key? key}) : super(key: key);
+  _HomeBody({Key? key}) : super(key: key);
+
+  final assetImageList = [
+    'assets/images/image1.png',
+    'assets/images/image2.png',
+    'assets/images/image6.png',
+    'assets/images/image7.png',
+    'assets/images/image14.png',
+    'assets/images/image13.png',
+    'assets/images/image12.png',
+    'assets/images/image11.png',
+  ];
+
+  final backgroundImageList = [
+    Colors.green.shade100,
+    Colors.blue.shade100,
+    Colors.green.shade100,
+    Colors.green.shade100,
+    Colors.yellow.shade900,
+    Colors.green.shade100,
+    Colors.green.shade100,
+    Colors.green.shade100,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -48,15 +70,18 @@ class _HomeBody extends StatelessWidget {
                 padding: const EdgeInsets.only(
                   bottom: 16,
                 ),
-                itemCount: 6,
+                itemCount: 8,
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 400,
                   childAspectRatio: 5 / 7,
                 ),
-                itemBuilder: (context, index) => const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: ProductCard(),
+                itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ProductCard(
+                    assetImage: assetImageList[index],
+                    backgroundColor: backgroundImageList[index],
+                  ),
                 ),
               ),
             ],
