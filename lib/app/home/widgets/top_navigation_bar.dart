@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ordo_test/app/home/widgets/search_text_field.dart';
 
 class TopNavigationBar extends StatelessWidget {
@@ -22,7 +23,7 @@ class TopNavigationBar extends StatelessWidget {
           ),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () => context.pushNamed('checkout'),
           child: Image.asset(
             'assets/icons/bag.png',
             height: 40.h,
