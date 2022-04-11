@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ordo_test/presentation/constant/constant.dart';
+import 'package:ordo_test/presentation/widgets/custom_back_button.dart';
 
 class ProductDetail extends StatelessWidget {
   const ProductDetail({Key? key}) : super(key: key);
@@ -16,28 +17,7 @@ class ProductDetail extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        leading: Padding(
-          padding: const EdgeInsets.all(14.0),
-          child: GestureDetector(
-            onTap: () => Navigator.pop(context),
-            child: ClipOval(
-              child: Material(
-                color: ColorStyle.cargooo,
-                child: InkWell(
-                  child: SizedBox(
-                    width: 20.w,
-                    height: 20.h,
-                    child: Icon(
-                      Icons.arrow_back_rounded,
-                      color: Colors.white,
-                      size: 20.sp,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
+        leading: const CustomBackButton(),
         actions: [
           GestureDetector(
             onTap: () {},
@@ -59,18 +39,18 @@ class ProductDetail extends StatelessWidget {
           const SizedBox(width: 16),
         ],
       ),
-      body: const _ProductDetailBody(),
+      body: _ProductDetailBody(),
     );
   }
 }
 
 class _ProductDetailBody extends StatelessWidget {
-  const _ProductDetailBody({ Key? key }) : super(key: key);
+  const _ProductDetailBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Column(
+      children: [],
     );
   }
 }
