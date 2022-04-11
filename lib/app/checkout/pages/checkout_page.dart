@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ordo_test/app/checkout/widgets/notes_card.dart';
 import 'package:ordo_test/app/checkout/widgets/order_note.dart';
 import 'package:ordo_test/injection.dart';
@@ -129,6 +130,21 @@ class _CheckoutBody extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             const NoticeCard(),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {},
+              child: Center(
+                child: Text(
+                  'Bayar Sekarang',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25.sp,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
             const SizedBox(height: 16),
           ],
         ),
