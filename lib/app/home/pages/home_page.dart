@@ -74,7 +74,7 @@ class _HomeBody extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 400,
-                  childAspectRatio: 5 / 7,
+                  childAspectRatio: 6 / 9,
                 ),
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.all(8.0),

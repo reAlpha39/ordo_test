@@ -19,7 +19,6 @@ class ProductCard extends StatelessWidget {
       onTap: () => context.pushNamed('product_detail'),
       child: Container(
         padding: const EdgeInsets.all(8.0),
-        height: 200.h,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(19),
@@ -29,16 +28,17 @@ class ProductCard extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: backgroundColor,
-                    borderRadius: BorderRadius.circular(19),
-                  ),
-                  child: Image.asset(
-                    assetImage,
-                    fit: BoxFit.contain,
-                    height: 140.h,
-                    width: double.infinity,
+                AspectRatio(
+                  aspectRatio: 1,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: backgroundColor,
+                      borderRadius: BorderRadius.circular(19),
+                    ),
+                    child: Image.asset(
+                      assetImage,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
                 const RatingLabel(),
