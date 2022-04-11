@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../constant/constant.dart';
@@ -11,8 +13,13 @@ ThemeData theme() {
     progressIndicatorTheme: const ProgressIndicatorThemeData(
       color: ColorStyle.cargooo,
     ),
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       elevation: 0,
+      toolbarHeight: 80.h,
+      systemOverlayStyle: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+      ),
       backgroundColor: Colors.transparent,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
