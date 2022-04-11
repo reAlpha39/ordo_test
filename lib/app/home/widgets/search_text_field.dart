@@ -15,9 +15,10 @@ class SearchTextField extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
-        child: Center(
+        child: Container(
+          padding: const EdgeInsets.only(top: 4),
           child: TextField(
-            
+            style: TextStyle(fontSize: 18.sp),
             decoration: InputDecoration(
               hintText: 'Cari dengan mengetik barang',
               border: InputBorder.none,

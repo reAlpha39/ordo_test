@@ -39,6 +39,7 @@ class NotesCard extends StatelessWidget {
             maxLines: 2,
             controller: cubit.noteControllerList[index],
             onChanged: (_) => cubit.changeNote(index),
+            style: TextStyle(fontSize: 18.sp),
             decoration: InputDecoration(
               border: OutlineInputBorder(
                 borderSide: const BorderSide(

@@ -33,7 +33,8 @@ ThemeData theme() {
       ),
     ),
     inputDecorationTheme: const InputDecorationTheme(
-      contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 14),
+      isDense: true,
+      contentPadding: EdgeInsets.all(8),
       hintStyle: TextStyle(
         color: Color(0xFFC4C4C4),
       ),
