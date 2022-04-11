@@ -17,6 +17,7 @@ class SearchTextField extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Center(
           child: TextField(
+            
             decoration: InputDecoration(
               hintText: 'Cari dengan mengetik barang',
               border: InputBorder.none,

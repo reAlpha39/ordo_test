@@ -73,16 +73,15 @@ class _HomeBody extends StatelessWidget {
                 ),
                 itemCount: 8,
                 physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 6 / 9,
+                  childAspectRatio: 6.w / 9.h,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
                 ),
-                itemBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ProductCard(
-                    assetImage: assetImageList[index],
-                    backgroundColor: backgroundImageList[index],
-                  ),
+                itemBuilder: (context, index) => ProductCard(
+                  assetImage: assetImageList[index],
+                  backgroundColor: backgroundImageList[index],
                 ),
               ),
             ],
