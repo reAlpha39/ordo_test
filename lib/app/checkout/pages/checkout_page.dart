@@ -9,6 +9,7 @@ import 'package:ordo_test/presentation/widgets/custom_back_button.dart';
 import '../blocs/note/note_cubit.dart';
 import '../widgets/delete_button.dart';
 import '../widgets/item_card.dart';
+import '../widgets/notice_card.dart';
 import '../widgets/payment_detail.dart';
 
 class CheckoutPage extends StatelessWidget {
@@ -41,51 +42,96 @@ class _CheckoutBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<NoteCubit>();
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: Column(
-        children: [
-          ListView.builder(
-            itemCount: 2,
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index) => Column(
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Column(
-                        children: [
-                          ItemCard(
-                            imageAsset: cubit.imageAsset[index],
-                            title: cubit.title[index],
-                            price: cubit.price[index],
-                            index: index,
-                          ),
-                          BlocBuilder<NoteCubit, NoteState>(
-                            builder: (context, state) => state.maybeWhen(
-                              success: () => cubit.isNoteShownList[index]
-                                  ? NotesCard(index: index)
-                                  : const SizedBox(),
-                              orElse: () => const SizedBox(),
+    return SingleChildScrollView(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: Column(
+          children: [
+            ListView.builder(
+              itemCount: 2,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (context, index) => Column(
+                children: [
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Column(
+                          children: [
+                            ItemCard(
+                              imageAsset: cubit.imageAsset[index],
+                              title: cubit.title[index],
+                              price: cubit.price[index],
+                              index: index,
                             ),
-                          ),
-                        ],
-                      ),
-                      const DeleteButton(),
-                    ],
+                            BlocBuilder<NoteCubit, NoteState>(
+                              builder: (context, state) => state.maybeWhen(
+                                success: () => cubit.isNoteShownList[index]
+                                    ? NotesCard(index: index)
+                                    : const SizedBox(),
+                                orElse: () => const SizedBox(),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const DeleteButton(),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const SizedBox(height: 16),
-          const OrderNote(),
-          const SizedBox(height: 16),
-          const PaymentDetail(),
-        ],
+            const SizedBox(height: 16),
+            const OrderNote(),
+            const SizedBox(height: 16),
+            const PaymentDetail(),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {},
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'Waktu Pengantaran',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {},
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'Alamat Pengiriman',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            const NoticeCard(),
+            const SizedBox(height: 16),
+          ],
+        ),
       ),
     );
   }
