@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ordo_test/injection.dart';
 import 'package:ordo_test/presentation/blocs/carousel_card/carousel_card_cubit.dart';
 import 'package:ordo_test/presentation/constant/constant.dart';
@@ -29,7 +30,7 @@ class ProductDetail extends StatelessWidget {
         leading: const CustomBackButton(),
         actions: [
           GestureDetector(
-            onTap: () {},
+            onTap: () => context.pushNamed('checkout'),
             child: Image.asset(
               'assets/icons/shopping_bag.png',
               height: 32.h,
