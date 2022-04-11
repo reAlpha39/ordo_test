@@ -10,6 +10,7 @@ import 'package:ordo_test/presentation/widgets/pill_card.dart';
 import '../../../presentation/widgets/carousel_card.dart';
 import '../widgets/product_description.dart';
 import '../widgets/product_price.dart';
+import '../widgets/review_rating.dart';
 
 class ProductDetail extends StatelessWidget {
   const ProductDetail({Key? key}) : super(key: key);
@@ -60,57 +61,59 @@ class _ProductDetailBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(height: 16),
-        const CarouselCard(
-          asset: 'assets/images/image11.png',
-        ),
-        const SizedBox(height: 32),
-        Stack(
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                color: Colors.red,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.elliptical(70, 70),
-                ),
-              ),
-              height: 100.h,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Container(
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          const SizedBox(height: 16),
+          const CarouselCard(
+            asset: 'assets/images/image11.png',
+          ),
+          const SizedBox(height: 32),
+          Stack(
+            children: [
+              Container(
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.red,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.elliptical(70, 70),
                   ),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 32,
-                    right: 16,
+                height: 100.h,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.elliptical(70, 70),
+                    ),
                   ),
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 24),
-                      const ProductPrice(),
-                      const SizedBox(height: 16),
-                      Container(
-                        height: 1,
-                        color: ColorStyle.greyColor,
-                      ),
-                      const SizedBox(height: 16),
-                      const ProductDescription(),
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 32),
+                    child: Column(
+                      children: [
+                        const SizedBox(height: 24),
+                        const ProductPrice(),
+                        const SizedBox(height: 16),
+                        Container(
+                          height: 1,
+                          color: ColorStyle.greyColor,
+                        ),
+                        const SizedBox(height: 16),
+                        const ProductDescription(),
+                        const SizedBox(height: 16),
+                        const ReviewRating(),
+                        const SizedBox(height: 16),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
-        )
-      ],
+            ],
+          )
+        ],
+      ),
     );
   }
 }
