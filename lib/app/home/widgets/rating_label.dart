@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ordo_test/presentation/constant.dart';
+import 'package:ordo_test/presentation/constant/constant.dart';
 
 class RatingLabel extends StatelessWidget {
   const RatingLabel({Key? key}) : super(key: key);

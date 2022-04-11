@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'constant.dart';
+import '../constant/constant.dart';
 
 ThemeData theme() {
   return ThemeData(
@@ -32,5 +32,6 @@ ThemeData theme() {
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: ColorStyle.greyColor, //thereby
     ),
+
   );
 }

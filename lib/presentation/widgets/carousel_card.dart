@@ -2,12 +2,14 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ordo_test/presentation/constant.dart';
+import 'package:ordo_test/presentation/constant/constant.dart';
 
 import '../blocs/carousel_card/carousel_card_cubit.dart';
 
 class CarouselCard extends StatelessWidget {
-  const CarouselCard({Key? key}) : super(key: key);
+  const CarouselCard({Key? key, required this.asset}) : super(key: key);
+
+  final String asset;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class CarouselCard extends StatelessWidget {
                   child: AspectRatio(
                     aspectRatio: 16 / 9,
                     child: Image.asset(
-                      'assets/images/adaaqua.png',
+                      asset,
                     ),
                   ),
                 ),

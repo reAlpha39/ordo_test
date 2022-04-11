@@ -7,9 +7,10 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import 'app/home/blocs/carousel_card/carousel_card_cubit.dart' as _i3;
 import 'app/home_root/blocs/custom_bottom_navbar/custom_bottom_navbar_cubit.dart'
-    as _i4; // ignore_for_file: unnecessary_lambdas
+    as _i4;
+import 'presentation/blocs/carousel_card/carousel_card_cubit.dart'
+    as _i3; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]

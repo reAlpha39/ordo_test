@@ -4,8 +4,8 @@ import 'package:ordo_test/app/home/widgets/product_card.dart';
 import 'package:ordo_test/app/home/widgets/top_navigation_bar.dart';
 import 'package:ordo_test/injection.dart';
 
-import '../blocs/carousel_card/carousel_card_cubit.dart';
-import '../widgets/carousel_card.dart';
+import '../../../presentation/blocs/carousel_card/carousel_card_cubit.dart';
+import '../../../presentation/widgets/carousel_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -40,7 +40,9 @@ class _HomeBody extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              const CarouselCard(),
+              const CarouselCard(
+                asset: 'assets/images/adaaqua.png',
+              ),
               GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(

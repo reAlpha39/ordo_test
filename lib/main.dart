@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'infrasturcture/router.dart';
 import 'injection.dart';
-import 'presentation/theme.dart';
+import 'presentation/themes/theme.dart';
 
 void main() {
   configureInjection();
