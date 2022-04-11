@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'infrasturcture/router.dart';
 import 'injection.dart';
+import 'presentation/theme.dart';
 
 void main() {
   configureInjection();
@@ -23,9 +24,7 @@ class MyApp extends StatelessWidget {
         routerDelegate: router.routerDelegate,
         debugShowCheckedModeBanner: false,
         title: 'Test Ordo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+        theme: theme(),
       ),
     );
   }
