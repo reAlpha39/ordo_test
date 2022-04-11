@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ordo_test/app/home/widgets/rating_label.dart';
 import 'package:ordo_test/presentation/constant/constant.dart';
+import 'package:ordo_test/presentation/widgets/pill_card.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({Key? key}) : super(key: key);
@@ -48,26 +49,17 @@ class ProductCard extends StatelessWidget {
                     color: ColorStyle.cargooo,
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: ColorStyle.cartago_,
-                    borderRadius: BorderRadius.circular(100),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 8,
-                      vertical: 2,
-                    ),
-                    child: Text(
-                      'Diskon 10%',
-                      style: TextStyle(
-                        fontSize: 16.sp,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                      ),
+                PillCard(
+                  backgroundColor: ColorStyle.cartago_,
+                  child: Text(
+                    'Diskon 10%',
+                    style: TextStyle(
+                      fontSize: 16.sp,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
-                )
+                ),
               ],
             ),
             Text(
