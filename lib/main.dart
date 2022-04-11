@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 800),
+      designSize: const Size(500, 1000),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: () => MaterialApp.router(

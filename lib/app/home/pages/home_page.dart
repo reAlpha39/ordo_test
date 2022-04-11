@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ordo_test/app/home/widgets/product_card.dart';
 import 'package:ordo_test/app/home/widgets/top_navigation_bar.dart';
 import 'package:ordo_test/injection.dart';
 
@@ -27,15 +28,35 @@ class _HomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: const [
-            SizedBox(
-              height: 10,
-            ),
-            TopNavigationBar(),
-            CarouselCard(),
-          ],
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 10,
+              ),
+              const TopNavigationBar(),
+              const CarouselCard(),
+              GridView.builder(
+                shrinkWrap: true,
+                padding: const EdgeInsets.only(
+                  bottom: 16,
+                ),
+                itemCount: 6,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 400,
+                  childAspectRatio: 5 / 7,
+                ),
+                itemBuilder: (context, index) => const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: ProductCard(),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
