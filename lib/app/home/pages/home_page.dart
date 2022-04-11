@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ordo_test/app/home/widgets/product_card.dart';
 import 'package:ordo_test/app/home/widgets/top_navigation_bar.dart';
 import 'package:ordo_test/injection.dart';
@@ -72,8 +73,8 @@ class _HomeBody extends StatelessWidget {
                 ),
                 itemCount: 8,
                 physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 400,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
                   childAspectRatio: 6 / 9,
                 ),
                 itemBuilder: (context, index) => Padding(
