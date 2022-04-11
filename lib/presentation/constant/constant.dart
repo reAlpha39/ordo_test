@@ -8,4 +8,5 @@ class ColorStyle {
   static const Color greyColor = Color(0x35010101);
   static const Color bgGreyColor = Color(0xFFF0F0F0);
   static const Color ratingColor = Color(0xFFDFAE1D);
+  static const Color tukode_ = Color(0xFF47623F);
 }

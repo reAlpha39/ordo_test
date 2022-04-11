@@ -8,6 +8,7 @@ import 'package:ordo_test/presentation/widgets/custom_back_button.dart';
 import 'package:ordo_test/presentation/widgets/pill_card.dart';
 
 import '../../../presentation/widgets/carousel_card.dart';
+import '../widgets/product_description.dart';
 import '../widgets/product_price.dart';
 
 class ProductDetail extends StatelessWidget {
@@ -100,6 +101,8 @@ class _ProductDetailBody extends StatelessWidget {
                         height: 1,
                         color: ColorStyle.greyColor,
                       ),
+                      const SizedBox(height: 16),
+                      const ProductDescription(),
                     ],
                   ),
                 ),
