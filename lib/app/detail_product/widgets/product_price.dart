@@ -81,7 +81,7 @@ class ProductPrice extends StatelessWidget {
           'Rp. 100.500',
           style: TextStyle(
             fontFamily: 'Inter',
-            fontSize: 22.sp,
+            fontSize: 19.sp,
             fontWeight: FontWeight.w800,
             color: ColorStyle.cargooo,
           ),
