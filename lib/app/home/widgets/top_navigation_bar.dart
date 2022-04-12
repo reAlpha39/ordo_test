@@ -18,24 +18,24 @@ class TopNavigationBar extends StatelessWidget {
           onTap: () {},
           child: Image.asset(
             'assets/icons/options.png',
-            height: 40.h,
-            width: 40.w,
+            height: 50.h,
+            width: 50.w,
           ),
         ),
         GestureDetector(
           onTap: () => context.pushNamed('checkout'),
           child: Image.asset(
             'assets/icons/bag.png',
-            height: 40.h,
-            width: 40.w,
+            height: 50.h,
+            width: 50.w,
           ),
         ),
         GestureDetector(
           onTap: () {},
           child: Image.asset(
             'assets/icons/notification.png',
-            height: 40.h,
-            width: 40.w,
+            height: 50.h,
+            width: 50.w,
           ),
         ),
       ],
