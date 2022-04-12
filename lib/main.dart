@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(500, 1000),
+      designSize: const Size(600, 1100),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: () => MaterialApp.router(
@@ -25,6 +25,13 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Test Ordo',
         theme: theme(),
+        builder: (context, widget) {
+          ScreenUtil.setContext(context);
+          return MediaQuery(
+            data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+            child: widget!,
+          );
+        },
       ),
     );
   }
