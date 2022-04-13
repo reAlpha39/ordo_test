@@ -60,7 +60,7 @@ class ProductPrice extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Inter',
                 decoration: TextDecoration.lineThrough,
-                fontSize: 22.sp,
+                fontSize: 26.sp,
                 color: ColorStyle.cargooo,
               ),
             ),
@@ -69,9 +69,9 @@ class ProductPrice extends StatelessWidget {
               child: Text(
                 'Diskon 10%',
                 style: TextStyle(
-                  fontSize: 16.sp,
+                  fontSize: 17.sp,
                   color: Colors.white,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ),
@@ -81,7 +81,7 @@ class ProductPrice extends StatelessWidget {
           'Rp. 100.500',
           style: TextStyle(
             fontFamily: 'Inter',
-            fontSize: 19.sp,
+            fontSize: 22.sp,
             fontWeight: FontWeight.w800,
             color: ColorStyle.cargooo,
           ),

@@ -19,8 +19,8 @@ class PillCard extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(
-          horizontal: 8,
-          vertical: 2,
+          horizontal: 10,
+          vertical: 3,
         ),
         child: child,
       ),

@@ -10,10 +10,11 @@ class TopNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        const SizedBox(width: 8),
         const Expanded(
           child: SearchTextField(),
         ),
-        const SizedBox(width: 16),
+        const SizedBox(width: 8),
         GestureDetector(
           onTap: () {},
           child: Image.asset(
@@ -38,6 +39,7 @@ class TopNavigationBar extends StatelessWidget {
             width: 50.w,
           ),
         ),
+        const SizedBox(width: 8),
       ],
     );
   }

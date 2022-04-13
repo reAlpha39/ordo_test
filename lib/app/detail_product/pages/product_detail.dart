@@ -48,7 +48,7 @@ class ProductDetail extends StatelessWidget {
               width: 22.h,
             ),
           ),
-          const SizedBox(width: 16),
+          const SizedBox(width: 24),
         ],
       ),
       body: MultiBlocProvider(
@@ -74,7 +74,7 @@ class _ProductDetailBody extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.only(bottom: 50),
+          padding: const EdgeInsets.only(bottom: 70),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -89,7 +89,7 @@ class _ProductDetailBody extends StatelessWidget {
                       decoration: const BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.only(
-                          topLeft: Radius.elliptical(70, 70),
+                          topLeft: Radius.elliptical(65, 55),
                         ),
                       ),
                       height: 300.h,
@@ -100,11 +100,11 @@ class _ProductDetailBody extends StatelessWidget {
                         decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(
-                            topLeft: Radius.elliptical(70, 70),
+                            topLeft: Radius.elliptical(60, 50),
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 32),
+                          padding: const EdgeInsets.symmetric(horizontal: 24),
                           child: Column(
                             children: [
                               const SizedBox(height: 24),

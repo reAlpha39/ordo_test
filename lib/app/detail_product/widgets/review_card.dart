@@ -16,10 +16,7 @@ class ReviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 8,
-      ),
+      padding: const EdgeInsets.all(16),
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(
@@ -28,7 +25,7 @@ class ReviewCard extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: ColorStyle.bgGreyColor,
-            blurRadius: 10,
+            blurRadius: 7,
             spreadRadius: 1,
             offset: Offset(
               0,
@@ -47,7 +44,7 @@ class ReviewCard extends StatelessWidget {
                   ClipOval(
                     child: Image.asset(
                       profilePictureAsset,
-                      height: 50.h,
+                      height: 40.h,
                     ),
                   ),
                   const SizedBox(width: 8),

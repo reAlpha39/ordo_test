@@ -10,15 +10,15 @@ class CustomBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const SizedBox(width: 16),
+        const SizedBox(width: 24),
         ClipOval(
           child: Material(
             color: ColorStyle.cargooo,
             child: InkWell(
               onTap: () => Navigator.pop(context),
               child: SizedBox(
-                height: 30.h,
-                width: 33.w,
+                height: 31.h,
+                width: 36.w,
                 child: Icon(
                   Icons.arrow_back_rounded,
                   color: Colors.white,

@@ -54,7 +54,7 @@ class ProductDescription extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 20.sp,
                     color: ColorStyle.cargooo,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
                 Text(

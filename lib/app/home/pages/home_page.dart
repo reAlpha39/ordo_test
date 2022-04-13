@@ -53,38 +53,38 @@ class _HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16,
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const SizedBox(height: 10),
-              const CarouselCard(
-                asset: 'assets/images/adaaqua.png',
-              ),
-              const SizedBox(height: 10),
-              GridView.builder(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(height: 10),
+            const CarouselCard(
+              asset: 'assets/images/adaaqua.png',
+            ),
+            const SizedBox(height: 30),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(
                   bottom: 16,
+                  left: 4,
+                  right: 4,
                 ),
                 itemCount: 8,
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 6.w / 8.h,
-                  mainAxisSpacing: 8,
-                  crossAxisSpacing: 8,
+                  childAspectRatio: 15.w / 18.h,
+                  mainAxisSpacing: 24,
+                  crossAxisSpacing: 24,
                 ),
                 itemBuilder: (context, index) => ProductCard(
                   assetImage: assetImageList[index],
                   backgroundColor: backgroundImageList[index],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

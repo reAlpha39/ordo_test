@@ -21,8 +21,8 @@ class CarouselCard extends StatelessWidget {
           options: CarouselOptions(
             autoPlay: true,
             enlargeCenterPage: true,
-            aspectRatio: 16 / 8,
-            viewportFraction: 0.9,
+            aspectRatio: 18 / 9,
+            viewportFraction: 1,
             onPageChanged: (index, reason) {
               carouselCubit.getPoolingCardIndex(index);
             },
@@ -55,7 +55,6 @@ class CarouselCard extends StatelessWidget {
                         : 43.w,
                     height: 8.0.h,
                     margin: const EdgeInsets.symmetric(
-                      vertical: 8.0,
                       horizontal: 4.0,
                     ),
                     decoration: BoxDecoration(

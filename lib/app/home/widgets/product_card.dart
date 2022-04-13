@@ -19,10 +19,10 @@ class ProductCard extends StatelessWidget {
     return GestureDetector(
       onTap: () => context.pushNamed('product_detail'),
       child: Container(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(19),
+          borderRadius: BorderRadius.circular(18),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +54,7 @@ class ProductCard extends StatelessWidget {
                   style: GoogleFonts.inter(
                     textStyle: TextStyle(
                       decoration: TextDecoration.lineThrough,
-                      fontSize: 22.sp,
+                      fontSize: 19.sp,
                       color: ColorStyle.cargooo,
                     ),
                   ),
@@ -64,7 +64,7 @@ class ProductCard extends StatelessWidget {
                   child: Text(
                     'Diskon 10%',
                     style: TextStyle(
-                      fontSize: 14.sp,
+                      fontSize: 11.sp,
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
                     ),
@@ -75,17 +75,17 @@ class ProductCard extends StatelessWidget {
             Text('Rp. 4500',
                 style: GoogleFonts.inter(
                   textStyle: TextStyle(
-                    fontSize: 22.sp,
+                    fontSize: 18.sp,
                     fontWeight: FontWeight.w800,
                     color: ColorStyle.cargooo,
                   ),
                 )),
-            const SizedBox(height: 16),
+            const SizedBox(height: 12),
             Text(
               'Lorem ipsum',
               style: TextStyle(
                 fontFamily: 'Inter',
-                fontSize: 22.sp,
+                fontSize: 20.sp,
                 fontWeight: FontWeight.w600,
                 color: Colors.black,
               ),

@@ -12,7 +12,7 @@ class NotesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = context.read<NoteCubit>();
     return Container(
-      width: MediaQuery.of(context).size.width - 30.w,
+      width: MediaQuery.of(context).size.width - 60.w,
       padding: const EdgeInsets.symmetric(
         horizontal: 16,
         vertical: 16,
@@ -20,7 +20,7 @@ class NotesCard extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(
-          Radius.circular(30),
+          Radius.circular(20),
         ),
       ),
       child: Column(

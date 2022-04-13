@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,15 +10,12 @@ class CustomBottomNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Platform.isIOS ? 80.h : 60.h,
+      height: 75.h,
       width: MediaQuery.of(context).size.width,
       color: Colors.white,
-      padding: EdgeInsets.only(
-        top: 10,
-        bottom: Platform.isIOS ? 20 : 10,
-      ),
+      padding: const EdgeInsets.all(10),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: const [
           _BottomNavbarButton(
             index: 0,
@@ -73,8 +68,8 @@ class _BottomNavbarButton extends StatelessWidget {
       child: BlocBuilder<CustomBottomNavbarCubit, CustomBottomNavbarState>(
         builder: (context, state) {
           return Container(
-            height: 20.h,
-            width: 20.w,
+            height: 28.h,
+            width: 28.w,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(

@@ -30,7 +30,7 @@ class _HomeRootBody extends StatelessWidget {
     final cubit = context.read<CustomBottomNavbarCubit>();
     return Stack(children: [
       Padding(
-        padding: const EdgeInsets.only(bottom: 50),
+        padding: const EdgeInsets.only(bottom: 80),
         child: PageView(
           controller: cubit.pageController,
           physics: const NeverScrollableScrollPhysics(),

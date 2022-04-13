@@ -26,7 +26,7 @@ class ItemCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
-        width: MediaQuery.of(context).size.width - 30.w,
+        width: MediaQuery.of(context).size.width - 60.w,
         padding: const EdgeInsets.symmetric(
           horizontal: 16,
           vertical: 16,
@@ -34,12 +34,12 @@ class ItemCard extends StatelessWidget {
         decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(
-            Radius.circular(30),
+            Radius.circular(25),
           ),
           boxShadow: [
             BoxShadow(
               color: ColorStyle.bgGreyColor,
-              blurRadius: 10,
+              blurRadius: 7,
               spreadRadius: 1,
               offset: Offset(0, 0),
             ),
@@ -51,6 +51,12 @@ class ItemCard extends StatelessWidget {
             Row(
               children: [
                 Container(
+                  constraints: const BoxConstraints(
+                    maxHeight: 90,
+                    minHeight: 90,
+                    minWidth: 90,
+                    maxWidth: 90,
+                  ),
                   padding: const EdgeInsets.symmetric(
                     horizontal: 8,
                     vertical: 8,
@@ -71,8 +77,7 @@ class ItemCard extends StatelessWidget {
                   ),
                   child: Image.asset(
                     imageAsset,
-                    height: 60.h,
-                    width: 60.w,
+                    fit: BoxFit.contain,
                   ),
                 ),
                 const SizedBox(width: 16),
@@ -89,6 +94,7 @@ class ItemCard extends StatelessWidget {
                         ),
                       ),
                     ),
+                    const SizedBox(height: 8),
                     Text(
                       price,
                       style: TextStyle(
