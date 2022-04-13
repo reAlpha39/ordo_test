@@ -8,7 +8,7 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45.h,
+      height: 40.h,
       decoration: BoxDecoration(
         color: ColorStyle.bgGreyColor,
         borderRadius: BorderRadius.circular(100),
